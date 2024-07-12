@@ -1,0 +1,184 @@
+@font-face {
+    font-family: Gamaamli;
+    src: url("./fonts/Ga_Maamli/GaMaamli-Regular.ttf");
+}
+
+*, div, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-snap-type: both mandatory;
+}
+
+body{
+
+    background: #000;
+    /* scroll-snap-align: center; */
+}
+
+/* ================ rooms ================*/
+#global_container{
+    /* display: flex; */
+    width: 2700px;
+    height: 1800px;
+    /* margin: 0px 200px; */
+    background: url("./assets/images/backgrounds/background.png");
+}
+
+#user{
+    position: absolute;
+    z-index: 2;
+}
+
+#top_floor, #middle_floor, #ground_floor{
+    display: flex;
+
+}
+#top_floor div, #middle_floor div, #ground_floor div {
+    width: 900px;
+    height: 600px;
+    scroll-snap-align: center;
+}
+
+/* =============== elements ===============*/
+#biblio{
+    position: absolute;
+    margin-top: 849px;
+    margin-left: 470px;
+}
+#biblio_2{
+    position: absolute;
+    margin-top: 748px;
+    margin-left: 810px;
+}
+#mecanisme_1{
+    position: absolute;
+    margin-top: 729px;
+    margin-left: 295px;
+}
+#engrenage{
+    position: absolute;
+    margin-top: 145px;
+    margin-left: 2479px;
+    animation: gear 3s linear 0s infinite;
+}
+#clef{
+    position: relative;
+    animation: key 4s linear 0s infinite;
+}
+#conteneur_clef{
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    margin-top: 902px;
+    margin-left: 826px;
+}
+#coffre_ferme{
+    position: absolute;
+    margin-top: 917px;
+    margin-left: 2380px;
+}
+#baguette{
+    position: absolute;
+    margin-top: 913px;
+    margin-left: 2400px;
+}
+#etoile{
+    position: absolute;
+    margin-top: 900px;
+    margin-left: 2470px;
+    animation: star 0.15s ease 0s infinite;
+}
+#princess{
+    position: absolute;
+    margin-top: 438px;
+    margin-left: 380px;
+}
+#bulle{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 450px;
+}
+
+/* ======== écrans de début / de fin =======*/
+
+
+#start_screen{
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url("./assets/images/backgrounds/start_scrren.png") center;
+    background-repeat: no-repeat;
+}
+#end_screen{
+    z-index: 10;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url("./assets/images/backgrounds/ecran_fin.jpg") center / cover;
+    background-color: rgb(68.2, 67.1, 45.5);
+}
+
+/* ================ messages ==============*/
+#message_1, #message_2{
+    position: absolute;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.37);
+    font-family: Gamaamli, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 180px;
+}
+
+#message_1{
+    margin-top: 680px;
+    margin-left: 390px;
+}
+#message_2{
+    margin-top: 820px;
+    margin-left: 2420px;
+}
+
+/* =============== keyframes ==============*/
+
+@keyframes gear {
+    0%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(0.05);
+    }
+    99%{
+        transform: scaleX(1);
+    }
+}
+@keyframes key {
+    0%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(0.05);
+        transform: rotateY(180deg);
+    }
+    99%{
+        transform: scaleX(1);
+    }
+}
+@keyframes star {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    99%{
+        transform: scale(1);
+    }
+}
+
